@@ -1052,7 +1052,8 @@ export default defineComponent({
     fileName: String,
     idConfig: { type: Object as PropType<ToolbarIdConfig> },
     pageScale: [Number, String] as PropType<PageScale>,
-    pageNumber: Number
+    pageNumber: Number,
+    args: { type: [Object, undefined] }
   },
   setup (props, ctx) {
     const defaultLocale = ref(JSON.stringify(locale))
@@ -1168,7 +1169,7 @@ export default defineComponent({
       if (!props.pdf) {
         pdfApp.PDFViewerApplication.close()
       } else {
-        pdfApp.PDFViewerApplication.open(props.pdf)
+        pdfApp.PDFViewerApplication.open(props.pdf, props.args)
           .then(() => {
             if (props.pageNumber) {
               setTimeout(
