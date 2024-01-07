@@ -17,7 +17,15 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
         type: 'asset/resource',
         dependency: { not: ['url'] }
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
+      },
     ]
   },
   plugins: [new MiniCssExtractPlugin()]
