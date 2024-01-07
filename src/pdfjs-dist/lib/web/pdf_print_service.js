@@ -21,8 +21,6 @@
  */
 "use strict";
 
-window.__nativePrint__ = window.print.bind(window);
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -74,7 +72,7 @@ function PDFPrintService(pdfDocument, pagesOverview, printContainer, l10n) {
   this.pagesOverview = pagesOverview;
   this.printContainer = printContainer;
   this.l10n = l10n || _ui_utils.NullL10n;
-  this.disableCreateObjectURL = pdfDocument.loadingParams["disableCreateObjectURL"];
+  this.disableCreateObjectURL = _app_options.AppOptions.get("disableCreateObjectURL");
   this.currentPage = -1;
   this.scratchCanvas = document.createElement("canvas");
 }

@@ -5,11 +5,17 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  fit-curve:
+    specifier: ^0.2.0
+    version: 0.2.0
   vue:
     specifier: ^3.0.0
     version: 3.4.5(typescript@5.3.3)
 
 devDependencies:
+  '@babel/plugin-transform-private-methods':
+    specifier: ^7.23.3
+    version: 7.23.3(@babel/core@7.23.7)
   '@mdi/font':
     specifier: ^7.4.47
     version: 7.4.47
@@ -4760,6 +4766,10 @@ packages:
       locate-path: 6.0.0
       path-exists: 4.0.0
     dev: true
+
+  /fit-curve@0.2.0:
+    resolution: {integrity: sha512-op7ofeL13getbqL5J5ACeNxTlLWzusn4/jjEjSVA1sS7PfXWumdtNITvLuTjSobis+jZzMil2rsJ3Vhw7OxQyQ==}
+    dev: false
 
   /flat-cache@3.2.0:
     resolution: {integrity: sha512-CYcENa+FtcUKLmhhqyctpclsq7QF38pKjZHsGNiSQF5r4FtoKDWabFDl3hzaEQMvT1LHEysw5twgLvpYYb4vbw==}
